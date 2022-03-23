@@ -14,7 +14,7 @@ const TodoInput = ({ onCreatePressed }) => {
     setTitle("");
   }
   return (
-      <div className=" w-[50vw] mx-auto mb-20">
+      <div className=" w-[90vw] sm:w-[50vw] mx-auto mb-20">
         <h3 className="text-3xl py-10 text-center">Todo List</h3>
         <hr />
         <div className="mb-3">

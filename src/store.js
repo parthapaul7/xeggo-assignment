@@ -1,10 +1,10 @@
 import { createStore,combineReducers } from "redux";
-import { todos } from "./redux/reducer";
+import { todos , logInStatus} from "./redux/reducer";
 import { persistReducer } from "redux-persist";
 import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";
 import storage from "redux-persist/lib/storage";
 
-const reducers ={todos}
+const reducers ={todos ,logInStatus}
 const persistConfig={
     key :"root",
     storage,

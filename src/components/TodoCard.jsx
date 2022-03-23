@@ -7,7 +7,7 @@ const TodoCard = ({ todos, onDeletePressed, onMarkPressed }) => {
   return (
     <div>
       {todos.map((e, i) => (
-        <div key={i} className="mx-auto w-[50vw]">
+        <div key={i} className="mx-auto w-[90vw] sm:w-[50vw] flex items-center">
           <hr />
           <input
             type="checkbox"

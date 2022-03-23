@@ -18,3 +18,10 @@ export const markAsComplete =(id,isChecked)=>({
     type:mark_as_complete,
     payload:{id,isChecked}
 })
+
+export const login_logout = "login_logout";
+
+export const loginLogout= (isLogged)=>({ 
+    type:login_logout,
+    payload:{isLogged}
+})

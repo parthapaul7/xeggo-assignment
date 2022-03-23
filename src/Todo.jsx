@@ -1,14 +1,23 @@
 import React from "react";
 import TodoInput from "./components/TodoInput";
 import TodoCard from "./components/TodoCard";
+import { connect } from "react-redux";
 
-const Todo = () => {
+const Todo = ({ logInStatus }) => {
   return (
     <>
-      <TodoInput />
-      <TodoCard />
+      {logInStatus.isLogged ? (
+        <>
+          <TodoInput />
+          <TodoCard />
+        </>
+      ) : (
+        <div className="text-center text-xl text-red-500 my-20">
+          Not logged! Login To View
+        </div>
+      )}
     </>
   );
 };
-
-export default Todo;
+const mapStateToProps = (state) => ({ logInStatus: state.logInStatus });
+export default connect(mapStateToProps)(Todo);
